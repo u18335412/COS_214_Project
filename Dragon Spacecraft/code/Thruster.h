@@ -14,8 +14,12 @@ class Thruster {
 		~Thruster();
 		void setPower(int power);
 		int getPower();
-		virtual void fireUp();
-		virtual void shutDown();
+		virtual void fireUp()=0;
+		virtual void shutDown()=0;
+		void turnOn();
+		void turnOff();
+		bool isOn();
+
 };
 
 #endif

@@ -4,6 +4,7 @@
 class SuperDraco : Thruster {
 	public:
 		SuperDraco();
+		SuperDraco(int p);
 		void ~superDraco();
 		void shutDown();
 		void fireUp();

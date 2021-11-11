@@ -4,7 +4,7 @@
 using namespace std;
 
  Spacecraft::Spacecraft() {
-	cout<<"The spacecraft has been created"<<endl;
+	reused = 0;
 }
 
 void Spacecraft::setCurrentLocation(string location) {

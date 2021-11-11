@@ -4,14 +4,11 @@
 
 class Mark2Parachute :public Parachute {
 	private:
-		int stoppingPower;
-
+		int SuccessRate
 	public:
 		Mark2Parachute();
 		~Mark2Parachute();
 		void deploy();
 		int calculateSuccessRate();
-		void setStoppingPower(int stoppingPower);
-		int getStoppingPower();
 };
 #endif

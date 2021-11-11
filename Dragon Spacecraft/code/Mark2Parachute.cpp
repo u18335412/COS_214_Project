@@ -15,6 +15,7 @@ void Mark2Parachute::deploy() {
 
 int Mark2Parachute::calculateSuccessRate() {
 	int SuccessRate= 0 + (rand() % 10);
+	setSuccessRate(SuccessRate);
 	return SuccessRate;
 }
 
@@ -27,4 +28,3 @@ int Mark2Parachute::getStoppingPower()
 {
 	return stoppingPower;
 }
-

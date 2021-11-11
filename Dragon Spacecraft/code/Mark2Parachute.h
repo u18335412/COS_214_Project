@@ -4,7 +4,7 @@
 
 class Mark2Parachute :public Parachute {
 	private:
-		int SuccessRate
+		int SuccessRate;
 	public:
 		Mark2Parachute();
 		~Mark2Parachute();

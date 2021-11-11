@@ -2,16 +2,11 @@
 #define SUPERDRACO_H
 
 class SuperDraco : Thruster {
-
-
-public:
-	SuperDraco();
-
-	void ~superDraco();
-
-	void shutDown();
-
-	void fireUp();
+	public:
+		SuperDraco();
+		void ~superDraco();
+		void shutDown();
+		void fireUp();
 };
 
 #endif

@@ -2,12 +2,11 @@
 #define THRUSTERCREATOR_H
 
 class ThrusterCreator {
+	private:
+		int power;
 
-private:
-	int power;
-
-public:
-	Thruster* createThruster(int power);
+	public:
+		virtual Thruster* createThruster()=0;
 };
 
 #endif

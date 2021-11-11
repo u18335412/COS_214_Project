@@ -7,8 +7,6 @@ CrewDragonSpacecraft::CrewDragonSpacecraft() {
 	cout<<"CrewDragonSpacecraft has been created"<<endl;
 }
 
-
-
 double CrewDragonSpacecraft::currentWeight() {
 	
 	double weight=0;

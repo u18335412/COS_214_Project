@@ -2,10 +2,8 @@
 #define SUPERDRACOCREATOR_H
 
 class SuperDracoCreator : ThrusterCreator {
-
-
-public:
-	SuperDrago* createSuperDracoThruster();
+	public:
+		SuperDrago* createSuperDracoThruster();
 };
 
 #endif

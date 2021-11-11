@@ -17,8 +17,7 @@ void Mark2ParachuteSystemObserver::update() {
 		{
 			observerCurrentHight=Dragon_Or_Crew_subj->getCurrtHight();
 		}
-	}
-		
+	}	
 }
 
 void Mark2ParachuteSystemObserver::print()
@@ -40,5 +39,4 @@ void Mark2ParachuteSystemObserver::print()
 	{
 		cout<<"NOT IN  OPTIMUM HIGHT TO DEPLOY PARACHUTE"<<endl;
 	}
-
 }

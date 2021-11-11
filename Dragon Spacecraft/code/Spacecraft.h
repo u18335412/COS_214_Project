@@ -42,7 +42,5 @@ class Spacecraft {
 
 		virtual int getCurrtHight();
 		virtual void setCurrtHight(int currtHight);
-
-
 };
 #endif

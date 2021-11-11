@@ -6,6 +6,7 @@ Mark3ParachuteSystemObserver::Mark3ParachuteSystemObserver(Spacecraft * Dragon_O
 	observerCurrentHight=0;
 	theParachute=new Mark3Parachute();
 }
+
 void Mark3ParachuteSystemObserver::update() {
 	if(Dragon_Or_Crew_subj !=NULL)
 	{	
@@ -17,8 +18,7 @@ void Mark3ParachuteSystemObserver::update() {
 		{
 			observerCurrentHight=Dragon_Or_Crew_subj->getCurrtHight();
 		}
-	}
-		
+	}	
 }
 
 void Mark3ParachuteSystemObserver::print()
@@ -40,5 +40,4 @@ void Mark3ParachuteSystemObserver::print()
 	{
 		cout<<"NOT IN  OPTIMUM HIGHT TO DEPLOY PARACHUTE"<<endl;
 	}
-
 }

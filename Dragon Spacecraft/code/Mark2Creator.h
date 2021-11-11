@@ -4,10 +4,8 @@
 #include "Mark2Parachute.h"
 
 class Mark2Creator :public ParachuteCreator {
-
-
-public:
-	Mark2Creator();
-	Parachute* createParachute();
+	public:
+		Mark2Creator();
+		Parachute* createParachute();
 };
 #endif

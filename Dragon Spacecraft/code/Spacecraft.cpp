@@ -7,17 +7,6 @@ using namespace std;
 	cout<<"The spacecraft has been created"<<endl;
 }
 
-// double Spacecraft::currentWeight() {		//pure virtual
-// 	double weight=0;
-// 	for(Cargo* item: cargoList){
-// 		weight += item->getWeight();
-// 	}
-// 	for(CrewMember* item: spacecraftCrew){
-// 		weight += item->getWeight();
-// 	}
-// 	return weight;
-// }
-
 void Spacecraft::setCurrentLocation(string location) {
 	this->currentLocation = location;
 }

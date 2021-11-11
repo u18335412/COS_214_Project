@@ -13,12 +13,10 @@ int Parachute::getStoppingPower() {
 	return this->stoppingPower;
 }
 
-void Parachute::deploy() {
-	// TODO - implement Parachute::deploy
-	throw "Not yet implemented";
-}
+// void Parachute::deploy() {
+	
+// }
 
-int Parachute::calculateSuccessRate() {
-	// TODO - implement Parachute::calculateSuccessRate
-	throw "Not yet implemented";
-}
+// int Parachute::calculateSuccessRate() {
+	
+// }

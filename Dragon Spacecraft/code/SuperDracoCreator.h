@@ -3,7 +3,7 @@
 
 class SuperDracoCreator : ThrusterCreator {
 	public:
-		SuperDrago* createSuperDracoThruster();
+		SuperDrago* createThruster();
 };
 
 #endif

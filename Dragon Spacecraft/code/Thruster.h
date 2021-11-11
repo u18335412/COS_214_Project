@@ -8,7 +8,6 @@ class Thruster {
 	private:
 		int power;
 		bool thrusterSwitch;
-		string name;
 
 	public:
 		Thruster();

@@ -26,6 +26,7 @@ void Mark3ParachuteSystemObserver::print()
 	if(observerCurrentHight==6)// 6 km
 	{
 		theParachute->deploy();
+
 		if(theParachute->calculateSuccessRate()>=5)
 		{	cout<<"Landed successfully"<<endl;
 			cout<<"The successful parachute tests bring’s the Crew/Cargo Dragon  one step closer to safely launching and landing astronauts."<<endl;
@@ -37,7 +38,7 @@ void Mark3ParachuteSystemObserver::print()
 	}
 	else
 	{
-		cout<<"NOT IN AN OPTIMUM HIGHT TO DEPLOY PARACHUTE"<<endl;
+		cout<<"NOT IN  OPTIMUM HIGHT TO DEPLOY PARACHUTE"<<endl;
 	}
 
 }

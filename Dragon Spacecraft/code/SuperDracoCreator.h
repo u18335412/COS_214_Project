@@ -1,9 +1,9 @@
 #ifndef SUPERDRACOCREATOR_H
 #define SUPERDRACOCREATOR_H
+#include "ThrusterCreator.h"
 
 class SuperDracoCreator : ThrusterCreator {
 	public:
-		SuperDrago* createThruster();
+		Thruster* createThruster();
 };
-
 #endif

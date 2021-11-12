@@ -1,4 +1,7 @@
 #include "SuperDraco.h"
+#include <iostream>
+
+using namespace std;
 
 SuperDraco::SuperDraco() {
 	// TODO - implement SuperDraco::SuperDraco

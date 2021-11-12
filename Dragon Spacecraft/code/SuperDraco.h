@@ -1,7 +1,7 @@
 #ifndef SUPERDRACO_H
 #define SUPERDRACO_H
-
-class SuperDraco : Thruster {
+#include "Thruster.h"
+class SuperDraco :public Thruster {
 	public:
 		SuperDraco();
 		SuperDraco(int p);

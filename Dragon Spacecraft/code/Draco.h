@@ -1,6 +1,8 @@
 #ifndef DRACO_H
 #define DRACO_H
 #include <string>
+#include "Thruster.h"
+
 class Draco : public Thruster {
 	public:
 		Draco();
@@ -9,5 +11,4 @@ class Draco : public Thruster {
 		void fireUp();
 		void shutDown();
 };
-
 #endif

@@ -29,10 +29,10 @@ void DragonSpacecraft::removeCargo(Cargo* cargo) {
 	// }
 }
 
-int CrewDragonSpacecraft::getCurrtHight() {
-	return this->currtHight_crewDragon;
+int DragonSpacecraft::getCurrentHeight(){
+	return this->currentHeight;
 }
 
-void CrewDragonSpacecraft::setCurrtHight_crewDragon(int currtHight) {
-	this->currtHight_crewDragon = currtHight;
+void DragonSpacecraft::setCurrentHeight(int currtHight) {
+	this->currentHeight = currtHight;
 }

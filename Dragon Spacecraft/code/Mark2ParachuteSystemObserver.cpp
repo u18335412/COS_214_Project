@@ -1,10 +1,13 @@
 #include "Mark2ParachuteSystemObserver.h"
+#include <iostream>
+
+using namespace std;
 
 Mark2ParachuteSystemObserver::Mark2ParachuteSystemObserver(Spacecraft * Dragon_Or_Crew_subj)
 {
 	this->Dragon_Or_Crew_subj=Dragon_Or_Crew_subj;
 	observerCurrentHight=0;
-	theParachute=new Mark3Parachute();
+	theParachute=new Mark2Parachute();
 }
 void Mark2ParachuteSystemObserver::update() {
 	if(Dragon_Or_Crew_subj !=NULL)

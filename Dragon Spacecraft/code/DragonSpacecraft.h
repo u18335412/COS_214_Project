@@ -10,7 +10,7 @@ using namespace std;
 class DragonSpacecraft :public Spacecraft {
 	private:
 		vector<Cargo*> spacecraftCargo;
-		int* currentHight_Dragon;
+		int currentHeight;
 
 	public:
 		DragonSpacecraft();
@@ -18,8 +18,7 @@ class DragonSpacecraft :public Spacecraft {
 		double currentWeight();
 		void loadCargo(Cargo* cargo);
 		void removeCargo(Cargo* cargo);
-		
-		int getCurrtHight();
-		void setCurrtHight(int currtHight);
+		int getCurrentHeight();
+		void setCurrentHeight(int currtHight);
 };
 #endif

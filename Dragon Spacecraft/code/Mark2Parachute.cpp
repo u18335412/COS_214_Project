@@ -19,12 +19,3 @@ int Mark2Parachute::calculateSuccessRate() {
 	return SuccessRate;
 }
 
-void Mark2Parachute::setStoppingPower(int stoppingPower)
-{
-	this->stoppingPower=stoppingPower;
-}
-
-int Mark2Parachute::getStoppingPower()
-{
-	return stoppingPower;
-}

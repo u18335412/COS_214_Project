@@ -1,4 +1,7 @@
 #include "Draco.h"
+#include <iostream>
+
+using namespace std;
 
 Draco::Draco() {
 	turnOff();

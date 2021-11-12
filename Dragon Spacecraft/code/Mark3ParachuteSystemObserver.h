@@ -3,6 +3,7 @@
 #include "ParachuteSystemObserver.h"
 #include "Spacecraft.h"
 #include "Parachute.h"
+#include "Mark3Parachute.h"
 
 class Mark3ParachuteSystemObserver :public  ParachuteSystemObserver {
 	private:

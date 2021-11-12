@@ -12,7 +12,7 @@ class Parachute {
 		void setStoppingPower(int stoppingPower);
 		int getStoppingPower();
 		int getSuccessRate();
-		void setSuccessRate();
+		void setSuccessRate(int);
 };
 
 #endif

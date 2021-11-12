@@ -5,6 +5,10 @@ Thruster::Thruster() {
 	this->thrusterSwitch = false;
 }
 
+Thruster::~Thruster(){
+
+}
+
 void Thruster::setPower(int power) {
 	this->power = power;
 }
@@ -27,6 +31,9 @@ int Thruster::getPower() {
 // 	cout<<"Thruster has been shut down"<<endl;
 // }
 
+bool Thruster::isOn(){
+	return this->thrusterSwitch;
+}
 void Thruster::turnOff(){
 	this->thrusterSwitch = false;
 }

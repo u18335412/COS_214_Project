@@ -4,8 +4,7 @@
 using namespace std;
 
 SuperDraco::SuperDraco() {
-	// TODO - implement SuperDraco::SuperDraco
-	throw "Not yet implemented";
+	
 }
 
 void SuperDraco::fireUp() {

@@ -12,6 +12,7 @@ class Cargo {
 
 	public:
 		Cargo();
+		Cargo(string, double);
 		~Cargo();
 		string getDescription();
 		string getName();

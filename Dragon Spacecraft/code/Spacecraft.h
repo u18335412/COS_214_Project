@@ -39,8 +39,10 @@ class Spacecraft {
 		void missionComplete();
 		void attach(Thruster* thruster);
 		void detach(Thruster* thruster);
-
+		void attachCargo(Cargo* a);
+		void detachCargo(string);
 		virtual int getCurrtHight();
 		virtual void setCurrtHight(int currtHight);
+		void printCargo();
 };
 #endif

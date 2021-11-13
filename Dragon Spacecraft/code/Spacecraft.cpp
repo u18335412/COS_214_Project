@@ -47,6 +47,8 @@ void Spacecraft::attach(ParachuteSystemObserver* obj) {
 	observerList.push_back(obj);
 }
 
+
+
 void Spacecraft::detach(ParachuteSystemObserver* obj) {
 	for(int i=0;i<observerList.size();i++)
 	{
@@ -56,6 +58,25 @@ void Spacecraft::detach(ParachuteSystemObserver* obj) {
 			{
 				observerList[i]=NULL;
 			}
+		}
+	}
+}
+
+void Spacecraft::attachCargo(Cargo* obj) {
+	cargoList.push_back(obj);
+	cout<<obj->getName()<<" has been added to the list"<<endl;
+}
+
+// void Spacecraft::detach(Cargo* cargo) {
+// 	remove(thrustersList.begin(), thrustersList.end(), cargo);
+// }
+
+void Spacecraft::detachCargo(string name) {
+	// remove(thrustersList.begin(), thrustersList.end(), cargo);
+	for(int i=0;i<cargoList.size();i++){
+		if(cargoList.at(i)->getName() == name ){
+			remove(cargoList.begin(), cargoList.end(), cargoList.at(i));
+			cout<<name<<"has been removed from the spacecraft"<<endl;
 		}
 	}
 }
@@ -79,4 +100,12 @@ int Spacecraft::getCurrtHight(){
 
 void Spacecraft::setCurrtHight(int currtHight){
 
+}
+
+void Spacecraft::printCargo(){
+	int i = 0;
+	for(Cargo* item: cargoList){
+		cout<<i<<".item "<<item->getName()<<"weighs "<<item->getWeight()<<endl;
+		i++;
+	}
 }

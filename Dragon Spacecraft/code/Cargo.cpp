@@ -4,6 +4,11 @@ Cargo::Cargo() {
 	
 }
 
+Cargo::Cargo(string n, double w){
+	setName(n);
+	setWeight(w);
+}
+
 string Cargo::getDescription() {
 	return this->description;
 }

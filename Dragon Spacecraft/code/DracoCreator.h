@@ -6,7 +6,7 @@
 
 class DracoCreator : ThrusterCreator {
 	public:
-		Thruster* createThruster();
+		Thruster* createThruster(string);
 };
 
 #endif

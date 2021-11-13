@@ -4,6 +4,6 @@
 #include "SuperDraco.h"
 class SuperDracoCreator : ThrusterCreator {
 	public:
-		Thruster* createThruster();
+		Thruster* createThruster(string);
 };
 #endif

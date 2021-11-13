@@ -86,12 +86,17 @@ void Spacecraft::missionComplete() {
 	reused++;
 }
 
-void Spacecraft::attach(Thruster* thruster) {
+void Spacecraft::attachThruster(Thruster* thruster) {
 	this->thrustersList.push_back(thruster);
 }
 
-void Spacecraft::detach(Thruster* thruster) {
-	remove(thrustersList.begin(), thrustersList.end(), thruster);
+void Spacecraft::detachThruster(string id) {
+	for(int i=0;i<thrustersList.size();i++){
+		if(thrustersList.at(i)->getId() == id ){
+			remove(thrustersList.begin(), thrustersList.end(), thrustersList.at(i));
+			cout<<id<<"has been removed from the spacecraft"<<endl;
+		}
+	};
 }
 
 int Spacecraft::getCurrtHight(){
@@ -103,6 +108,7 @@ void Spacecraft::setCurrtHight(int currtHight){
 }
 
 void Spacecraft::print(){
+	crewInfo();
 	int i = 0;
 	double w = 0;
 	cout<<"Cargo Information:"<<endl;
@@ -116,6 +122,14 @@ void Spacecraft::print(){
 	for(Parachute* item: parachuteList){
 		cout<<item->getId()<<" success rate:"<<item->getSuccessRate()<<"0%"<<endl;
 	}
+	cout<<"The Average success rate  of the attached parachutes is: "<<AverageParachuteSuccessRate()<<endl;
+	
+
+	cout<<"Thrusters Information:"<<endl;
+	for(Thruster* item: thrustersList){
+		cout<<item->getId()<<"Thruster Power: "<<item->getPower()<<" pounds force"<<endl;
+	}
+	cout<<"Total Thruster Power is: "<<TotalPowerOfThrusters()<<endl;
 }
 
 void Spacecraft::attachParachute(Parachute* parachute){
@@ -130,4 +144,35 @@ void Spacecraft::detachParachute(string id){
 			cout<<id<<"has been removed from the spacecraft"<<endl;
 		}
 	}
+}
+
+double Spacecraft::AverageParachuteSuccessRate()
+{
+	double sum=0;
+	for(Parachute* item: parachuteList){
+		sum+=item->getSuccessRate();
+	}	
+	double avg=sum/4;
+	return avg;
+}
+
+double Spacecraft::TotalPowerOfThrusters()
+{
+	double sum=0;
+	for(Thruster* item: thrustersList){
+		sum+=item->getPower();
+	}
+	return sum;
+}
+
+void Spacecraft::enterCrewMember(CrewMember* a){
+
+}
+
+void Spacecraft::removeCrewMember(string a){
+
+}
+
+void Spacecraft::crewInfo(){
+	
 }

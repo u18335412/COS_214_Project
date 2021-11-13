@@ -1,5 +1,5 @@
 #include "DracoCreator.h"
 
-Thruster* DracoCreator::createThruster(){
-	return new Draco();
+Thruster* DracoCreator::createThruster(string i){
+	return new Draco(i);
 }

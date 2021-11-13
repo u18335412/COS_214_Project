@@ -11,6 +11,7 @@ class CrewMember {
 
 	public:
 		CrewMember();
+		CrewMember(string, double);
 		~CrewMember();
 		void setName(string name);
 		void setWeight(double weight);

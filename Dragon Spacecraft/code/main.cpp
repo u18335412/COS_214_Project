@@ -58,6 +58,33 @@ int main()
     }
     else{
         spacecraft = new CrewDragonSpacecraft();
+
+        while(true){
+            bool wantCrew;
+            cout<<"Do you want to add a crew member? (0:no 1:yes)"<<endl;
+            cin>>wantCrew;
+            if(wantCrew == false){
+                break;
+            }
+            else{
+                string memberName;
+                double memberWeight;
+                cout<<"Enter name of crew member."<<endl;
+                cin>>memberName;
+                cout<<"Enter weight of crew member"<<endl;
+                cin>>memberWeight;
+                while(memberWeight<0){
+                    cout<<"Please enter valid weight"<<endl;
+                    cin>>memberWeight;
+                }
+                spacecraft->enterCrewMember(new CrewMember(memberName, memberWeight));
+            }
+           cout<<"Do you want to enter another member? (0:no 1:yes)"<<endl;
+            cin>>wantCrew;
+            if(wantCrew == 0){
+                break;
+            }
+        }
     }
 
     
@@ -130,6 +157,24 @@ int main()
         Mark3Creator* mark3Creator; // =new Mark2Creator();
         for(int i=0;i<4;i++){
             spacecraft->attachParachute(mark3Creator->createParachute("Mark3Parchute"+to_string(i)));
+        }
+    }
+
+    bool thrusterOption;
+    int thrusterPower;
+    cout<<"Please select the type of thrusters you want to use\n0.Draco Thrusters\t 1.SuperDraco Thrusers"<<endl;
+    cin>>thrusterOption;
+    cin>>thrusterPower;
+    if(thrusterOption == 0){
+        DracoCreator* dracoCreator;
+        for(int i=0;i<16;i++){
+            spacecraft->attachThruster(dracoCreator->createThruster("Draco"+to_string(i)));
+        }
+    }
+    else if(thrusterOption == 1){
+        SuperDracoCreator* superDracoCreator; // =new Mark2Creator();
+        for(int i=0;i<16;i++){
+            spacecraft->attachThruster(superDracoCreator->createThruster("SuperDraco"+to_string(i)));
         }
     }
     spacecraft->print();

@@ -5,10 +5,22 @@ Thruster::Thruster() {
 	this->thrusterSwitch = false;
 }
 
+Thruster::Thruster(string id) {
+	this->thrusterSwitch = false;
+	setId(id);
+}
+
 Thruster::~Thruster(){
 
 }
 
+void Thruster::setId(string id){
+	this->id = id;
+}
+
+string Thruster::getId(){
+	return id;
+}
 void Thruster::setPower(int power) {
 	this->power = power;
 }

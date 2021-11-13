@@ -5,10 +5,12 @@ using namespace std;
 
 Draco::Draco() {
 	turnOff();
+	this->setPower(80);
 }
 
-Draco::Draco(int p) {
-	this->setPower(p);
+Draco::Draco(string id) {
+	this->setPower(80);
+	this->setId(id);
 	turnOff();
 }
 

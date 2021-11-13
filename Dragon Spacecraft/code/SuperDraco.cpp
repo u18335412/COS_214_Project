@@ -4,7 +4,14 @@
 using namespace std;
 
 SuperDraco::SuperDraco() {
-	
+	turnOff();
+	this->setPower(90);
+}
+
+SuperDraco::SuperDraco(string id) {
+	this->setPower(90);
+	this->setId(id);
+	turnOff();
 }
 
 void SuperDraco::fireUp() {
@@ -20,3 +27,4 @@ void SuperDraco::shutDown() {
 	this->turnOff();
 	cout<<"The Super-Drago thruster has been shut down"<<endl;
 }
+

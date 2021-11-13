@@ -8,9 +8,10 @@ class Thruster {
 	private:
 		int power;
 		bool thrusterSwitch;
-
+		string id;
 	public:
 		Thruster();
+		Thruster(string);
 		~Thruster();
 		void setPower(int power);
 		int getPower();
@@ -19,6 +20,8 @@ class Thruster {
 		void turnOn();
 		void turnOff();
 		bool isOn();
+		void setId(string);
+		string getId();
 
 };
 

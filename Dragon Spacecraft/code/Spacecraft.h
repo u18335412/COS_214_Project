@@ -15,6 +15,8 @@ class Spacecraft {
 		vector<Parachute*> parachuteList;
 		vector<Thruster*> thrustersList;
 		vector<Cargo*> cargoList;
+
+
 		double maxWeightToEarth;
 		double maxWeightToOrbit;
 		string currentLocation;
@@ -37,8 +39,8 @@ class Spacecraft {
 		void attach(ParachuteSystemObserver* obj);
 		void detach(ParachuteSystemObserver* obj);
 		void missionComplete();
-		void attach(Thruster* thruster);
-		void detach(Thruster* thruster);
+		void attachThruster(Thruster* thruster);
+		void detachThruster(string);
 		void attachCargo(Cargo* a);
 		void detachCargo(string);
 		void attachParachute(Parachute*);
@@ -46,6 +48,10 @@ class Spacecraft {
 		virtual int getCurrtHight();
 		virtual void setCurrtHight(int currtHight);
 		void print();
-		
+		double AverageParachuteSuccessRate();
+		double TotalPowerOfThrusters();
+		virtual void enterCrewMember(CrewMember*);
+		virtual void removeCrewMember(string);
+		virtual void crewInfo();
 };
 #endif

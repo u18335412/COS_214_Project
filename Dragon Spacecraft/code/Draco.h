@@ -3,10 +3,12 @@
 #include <string>
 #include "Thruster.h"
 
+using namespace std;
+
 class Draco : public Thruster {
 	public:
 		Draco();
-		Draco(int p);
+		Draco(string id);
 		~Draco();
 		void fireUp();
 		void shutDown();

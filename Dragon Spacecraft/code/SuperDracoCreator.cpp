@@ -1,5 +1,5 @@
 #include "SuperDracoCreator.h"
 
-Thruster* SuperDracoCreator::createThruster(){
-	return new SuperDraco();
+Thruster* SuperDracoCreator::createThruster(string id){
+	return new SuperDraco(id);
 }

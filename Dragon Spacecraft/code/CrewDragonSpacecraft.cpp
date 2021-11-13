@@ -25,3 +25,27 @@ int CrewDragonSpacecraft::getCurrentHeight() {
 void CrewDragonSpacecraft::setCurrentHeight(int currtHight) {
 	this->currentHeight = currtHight;
 }
+
+void CrewDragonSpacecraft::enterCrewMember(CrewMember* member){
+	spacecraftCrew.push_back(member);
+	cout<<member->getName()<<" has borded the spacecraft"<<endl;
+}
+
+void CrewDragonSpacecraft::removeCrewMember(string id){
+	for(int i=0;i<spacecraftCrew.size();i++){
+		if(spacecraftCrew.at(i)->getName() == id ){
+			remove(spacecraftCrew.begin(), spacecraftCrew.end(), spacecraftCrew.at(i));
+			cout<<id<<"has left the spacecraft"<<endl;
+		}
+	}
+}
+
+void CrewDragonSpacecraft::crewInfo(){
+	cout<<"Crew Information:"<<endl;
+	double w = 0;
+	for(CrewMember* item: spacecraftCrew){
+		cout<<item->getName()<<" weight: "<<item->getWeight()<<" kg"<<endl;
+		w += item->getWeight();
+	}
+	cout<<"Total crew weight is: "<<w<<endl;
+}

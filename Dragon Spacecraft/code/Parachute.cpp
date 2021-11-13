@@ -27,3 +27,7 @@ void Parachute::setSuccessRate(int s){
 void Parachute::setId(string id){
 	this->id = id;
 }
+
+string Parachute::getId(){
+	return this->id;
+}

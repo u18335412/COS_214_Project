@@ -6,9 +6,13 @@
 using namespace std;
 
 Mark2Parachute::Mark2Parachute() {
-	
+	setSuccessRate(calculateSuccessRate());
 }
 
+Mark2Parachute::Mark2Parachute(string name) {
+	setId(name);
+	setSuccessRate(calculateSuccessRate());
+}
 void Mark2Parachute::deploy() {
 	cout<<"Now deploying Mark2Parachute."<<endl;
 }

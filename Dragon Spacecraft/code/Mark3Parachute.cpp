@@ -4,7 +4,12 @@
 using namespace std;
 
 Mark3Parachute::Mark3Parachute() {
-	
+	setSuccessRate(calculateSuccessRate());
+}
+
+Mark3Parachute::Mark3Parachute(string name) {
+	setId(name);
+	setSuccessRate(calculateSuccessRate());
 }
 
 void Mark3Parachute::deploy() {

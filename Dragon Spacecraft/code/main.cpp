@@ -121,10 +121,17 @@ int main()
     cout<<"Please select the type of parachute you want to use\n0.Mark2 Parachutes\t 1.Mark3 Parachutes"<<endl;
     cin>>parachuteOption;
     if(parachuteOption == 0){
+        Mark2Creator* mark2Creator; // =new Mark2Creator();
         for(int i=0;i<4;i++){
-            spacecraft->attachParachute(new Mark2Parachute("Mark2Parchute"+to_string(i)));
-        })
+            spacecraft->attachParachute(mark2Creator->createParachute("Mark2Parchute"+to_string(i)));
+        }
     }
-    spacecraft->printCargo();
+    else if(parachuteOption == 1){
+        Mark3Creator* mark3Creator; // =new Mark2Creator();
+        for(int i=0;i<4;i++){
+            spacecraft->attachParachute(mark3Creator->createParachute("Mark3Parchute"+to_string(i)));
+        }
+    }
+    spacecraft->print();
     return 0;
 }

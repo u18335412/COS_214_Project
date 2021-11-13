@@ -114,7 +114,7 @@ void Spacecraft::print(){
 	cout<<"The total amount of weight: "<<w<<"Kg"<<endl;
 	cout<<"Parachute Information:"<<endl;
 	for(Parachute* item: parachuteList){
-		cout<<item->getId()<<" success rate:"<<item->getSuccessRate()<<endl;
+		cout<<item->getId()<<" success rate:"<<item->getSuccessRate()<<"0%"<<endl;
 	}
 }
 
@@ -123,7 +123,7 @@ void Spacecraft::attachParachute(Parachute* parachute){
 	cout<<parachute->getId()<<" has been added to the spacecraft"<<endl;
 }
 
-void detachParachute(string id){
+void Spacecraft::detachParachute(string id){
 	for(int i=0;i<parachuteList.size();i++){
 		if(parachuteList.at(i)->getId() == id ){
 			remove(parachuteList.begin(), parachuteList.end(), parachuteList.at(i));

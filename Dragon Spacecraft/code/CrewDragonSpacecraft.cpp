@@ -41,11 +41,17 @@ void CrewDragonSpacecraft::removeCrewMember(string id){
 }
 
 void CrewDragonSpacecraft::crewInfo(){
-	cout<<"Crew Information:"<<endl;
+	cout<<"-----------------------------------------------------------------------------------------------------------------"<<endl;
+	cout<<"\t\t\tCrew Information:"<<endl;
+	cout<<"-----------------------------------------------------------------------------------------------------------------"<<endl;
 	double w = 0;
+	int i=0;
 	for(CrewMember* item: spacecraftCrew){
-		cout<<item->getName()<<" weight: "<<item->getWeight()<<" kg"<<endl;
+		cout<<i<<item->getName()<<" weight: "<<item->getWeight()<<" kg"<<endl;
 		w += item->getWeight();
+		i++;
 	}
+	cout<<endl;
 	cout<<"Total crew weight is: "<<w<<endl;
+	cout<<endl;
 }

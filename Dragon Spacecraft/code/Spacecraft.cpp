@@ -109,39 +109,56 @@ void Spacecraft::setCurrtHight(int currtHight){
 
 void Spacecraft::print(){
 	crewInfo();
+
 	int i = 0;
 	double w = 0;
-	cout<<"Cargo Information:"<<endl;
+	cout<<"-----------------------------------------------------------------------------------------------------------------"<<endl;
+	cout<<"\t\t\tCargo Information:"<<endl;
+	cout<<"-----------------------------------------------------------------------------------------------------------------"<<endl;
 	for(Cargo* item: cargoList){
 		cout<<i<<".item "<<item->getName()<<"weighs "<<item->getWeight()<<endl;
 		w +=item->getWeight();
 		i++;
 	}
+	cout<<endl;
 	cout<<"The total amount of weight: "<<w<<"Kg"<<endl;
-	cout<<"Parachute Information:"<<endl;
-	for(Parachute* item: parachuteList){
-		cout<<item->getId()<<" success rate:"<<item->getSuccessRate()<<"0%"<<endl;
-	}
-	cout<<"The Average success rate  of the attached parachutes is: "<<AverageParachuteSuccessRate()<<endl;
-	
+	cout<<endl;
 
-	cout<<"Thrusters Information:"<<endl;
-	for(Thruster* item: thrustersList){
-		cout<<item->getId()<<"Thruster Power: "<<item->getPower()<<" pounds force"<<endl;
+	cout<<"-----------------------------------------------------------------------------------------------------------------"<<endl;
+	cout<<"\t\t\tParachute Information:"<<endl;
+	cout<<"-----------------------------------------------------------------------------------------------------------------"<<endl;
+	i=0;
+	for(Parachute* item: parachuteList){
+		cout<<i<<". "<<item->getId()<<" success rate:"<<item->getSuccessRate()<<"0%"<<endl;
+		i++;
 	}
-	cout<<"Total Thruster Power is: "<<TotalPowerOfThrusters()<<endl;
+	cout<<endl;
+	cout<<"The Average success rate  of the attached parachutes is: "<<AverageParachuteSuccessRate()<<"%"<<endl;
+	cout<<endl;	
+
+	cout<<"-----------------------------------------------------------------------------------------------------------------"<<endl;
+	cout<<"\t\t\tThrusters Information:"<<endl;
+	cout<<"-----------------------------------------------------------------------------------------------------------------"<<endl;
+	i=0;
+	for(Thruster* item: thrustersList){
+		cout<<i<<". "<<item->getId()<<"Thruster Power: "<<item->getPower()<<" pounds force"<<endl;
+		i++;
+	}
+	cout<<endl;
+	cout<<"Total Thruster Power is: "<<TotalPowerOfThrusters()<<" pounds force"<<endl;
+	cout<<endl;
 }
 
 void Spacecraft::attachParachute(Parachute* parachute){
 	parachuteList.push_back(parachute);
-	cout<<parachute->getId()<<" has been added to the spacecraft"<<endl;
+	cout<<parachute->getId()<<" Has been added to the spacecraft"<<endl;
 }
 
 void Spacecraft::detachParachute(string id){
 	for(int i=0;i<parachuteList.size();i++){
 		if(parachuteList.at(i)->getId() == id ){
 			remove(parachuteList.begin(), parachuteList.end(), parachuteList.at(i));
-			cout<<id<<"has been removed from the spacecraft"<<endl;
+			cout<<id<<" Has been removed from the spacecraft"<<endl;
 		}
 	}
 }
@@ -153,6 +170,7 @@ double Spacecraft::AverageParachuteSuccessRate()
 		sum+=item->getSuccessRate();
 	}	
 	double avg=sum/4;
+	avg *=10;
 	return avg;
 }
 

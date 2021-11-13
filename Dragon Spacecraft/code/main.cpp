@@ -32,14 +32,17 @@ int main()
     /*Testing*/
     int spacecraftOption = 0;
     Spacecraft* spacecraft = NULL;
-    cout<<"Building/Testing Spacecraft Configurations"<<endl;
+    cout<<"-----------------------------------------------------------------------------------------------------------------"<<endl;
+    cout<<"\t\t\tBuilding/Testing Spacecraft Configurations"<<endl;
+    cout<<"-----------------------------------------------------------------------------------------------------------------"<<endl;
 
-    cout<<"Which type of Spacecraft do you want to use?"<<endl;
+
+    cout<<"\nWhich type of Spacecraft do you want to use?"<<endl;
     cout<<"0.Dragon Spacecraft \t 1.CrewDragon Spacecraft"<<endl;
     cin>>spacecraftOption;
     if(spacecraftOption>1 || spacecraftOption < 0){
         while(spacecraftOption>1 || spacecraftOption<0){
-            cout<<"Please enter a valid option"<<endl;
+            cout<<"\nPlease enter a valid option"<<endl;
             cin>>spacecraftOption;
         }
     }
@@ -49,7 +52,7 @@ int main()
          cout<<spacecraftOption<<".Dragon Spacecraft"<<endl;
     }else if(spacecraftOption==1)
     {
-        cout<<spacecraftOption<<"CrewDragon Spacecraft"<<endl;
+        cout<<spacecraftOption<<".CrewDragon Spacecraft"<<endl;
     }
    
 
@@ -61,7 +64,7 @@ int main()
 
         while(true){
             bool wantCrew;
-            cout<<"Do you want to add a crew member? (0:no 1:yes)"<<endl;
+            cout<<"\nDo you want to add a crew member? (0:no 1:yes)"<<endl;
             cin>>wantCrew;
             if(wantCrew == false){
                 break;
@@ -69,7 +72,7 @@ int main()
             else{
                 string memberName;
                 double memberWeight;
-                cout<<"Enter name of crew member."<<endl;
+                cout<<"\nEnter name of crew member."<<endl;
                 cin>>memberName;
                 cout<<"Enter weight of crew member"<<endl;
                 cin>>memberWeight;
@@ -91,7 +94,7 @@ int main()
 
     while(true){
         int cargoOption = 0;
-        cout<<"Now please select the cargo to be loaded on the spacecraft.\n 0.Food Supplies\t 1.Spacecraft Equipment tools\t  2. ISS cargo(classified)\t 3.Oxygen tanks"<<endl;
+        cout<<"\nNow please select the cargo to be loaded on the spacecraft.\n 0.Food Supplies\t 1.Spacecraft Equipment tools\t  2. ISS cargo(classified)\t 3.Oxygen tanks"<<endl;
         cin>>cargoOption;
         int p = 0;
         int cargoWeight =0;
@@ -107,7 +110,7 @@ int main()
             string name = "FoodSupply: Label";
             Cargo* cargo = new Cargo();
             name = name + to_string(p);
-            cout<<"How much does the cargo weigh?"<<endl;
+            cout<<"\nHow much does the cargo weigh?"<<endl;
             cin>>cargoWeight;
             if(cargoWeight<0){
                 while(cargoWeight<0){
@@ -137,7 +140,7 @@ int main()
             spacecraft->attachCargo(new Cargo(name, cargoWeight));
         }
         bool doneCargo;
-        cout<<"Are you done adding cargo? (1:yes/0:no)"<<endl;
+        cout<<"\nAre you done adding cargo? (1:yes/0:no)"<<endl;
         cin>>doneCargo;
         if(doneCargo == true){
             break;
@@ -145,7 +148,7 @@ int main()
     }
 
     bool parachuteOption;
-    cout<<"Please select the type of parachute you want to use\n0.Mark2 Parachutes\t 1.Mark3 Parachutes"<<endl;
+    cout<<"\nPlease select the type of parachute you want to use\n0.Mark2 Parachutes\t 1.Mark3 Parachutes"<<endl;
     cin>>parachuteOption;
     if(parachuteOption == 0){
         Mark2Creator* mark2Creator; // =new Mark2Creator();
@@ -162,9 +165,8 @@ int main()
 
     bool thrusterOption;
     int thrusterPower;
-    cout<<"Please select the type of thrusters you want to use\n0.Draco Thrusters\t 1.SuperDraco Thrusers"<<endl;
+    cout<<"\nPlease select the type of thrusters you want to use\n0.Draco Thrusters\t 1.SuperDraco Thrusers"<<endl;
     cin>>thrusterOption;
-    cin>>thrusterPower;
     if(thrusterOption == 0){
         DracoCreator* dracoCreator;
         for(int i=0;i<16;i++){

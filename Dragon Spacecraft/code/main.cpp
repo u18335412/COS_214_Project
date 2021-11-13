@@ -112,10 +112,19 @@ int main()
         bool doneCargo;
         cout<<"Are you done adding cargo? (1:yes/0:no)"<<endl;
         cin>>doneCargo;
-        spacecraft->printCargo();
         if(doneCargo == true){
             break;
         }
     }
+
+    bool parachuteOption;
+    cout<<"Please select the type of parachute you want to use\n0.Mark2 Parachutes\t 1.Mark3 Parachutes"<<endl;
+    cin>>parachuteOption;
+    if(parachuteOption == 0){
+        for(int i=0;i<4;i++){
+            spacecraft->attachParachute(new Mark2Parachute("Mark2Parchute"+to_string(i)));
+        })
+    }
+    spacecraft->printCargo();
     return 0;
 }

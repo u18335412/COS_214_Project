@@ -102,10 +102,32 @@ void Spacecraft::setCurrtHight(int currtHight){
 
 }
 
-void Spacecraft::printCargo(){
+void Spacecraft::print(){
 	int i = 0;
+	double w = 0;
+	cout<<"Cargo Information:"<<endl;
 	for(Cargo* item: cargoList){
 		cout<<i<<".item "<<item->getName()<<"weighs "<<item->getWeight()<<endl;
+		w +=item->getWeight();
 		i++;
+	}
+	cout<<"The total amount of weight: "<<w<<"Kg"<<endl;
+	cout<<"Parachute Information:"<<endl;
+	for(Parachute* item: parachuteList){
+		cout<<item->getId()<<" success rate:"<<item->getSuccessRate()<<endl;
+	}
+}
+
+void Spacecraft::attachParachute(Parachute* parachute){
+	parachuteList.push_back(parachute);
+	cout<<parachute->getId()<<" has been added to the spacecraft"<<endl;
+}
+
+void detachParachute(string id){
+	for(int i=0;i<parachuteList.size();i++){
+		if(parachuteList.at(i)->getId() == id ){
+			remove(parachuteList.begin(), parachuteList.end(), parachuteList.at(i));
+			cout<<id<<"has been removed from the spacecraft"<<endl;
+		}
 	}
 }
